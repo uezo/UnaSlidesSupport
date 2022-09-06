@@ -74,8 +74,11 @@ VRChatでは外部動画の再生が可能なため、プレゼン資料を動�
 
 ## 作成方法
 
-- PowerPointの場合、ファイル > エクスポート でMP4形式を選択。継続時間を1秒に設定して保存すればOK
-- Google SlidesやPDFの場合、1スライド1画像の形式で出力したのち、動画に変換。パッケージに同梱のPythonスクリプトを実行することで変換可能。後日もっと使いやすい形で提供予定
+- PowerPoint: ファイル > エクスポート でMP4形式を選択。継続時間を1秒に設定して保存すればOK
+- Google Slides: PDFにエクスポートしたのち、[Webコンバーター](https://unagiken.com/unaslides/)にアップロードすることで動画に変換
+- PDF: [Webコンバーター](https://unagiken.com/unaslides/)にアップロードすることで動画に変換
+
+なおGoogle SlidesやPDFをローカルで変換したい場合、1スライド1画像の形式で出力したのち、パッケージに同梱のPythonスクリプトを実行することで変換可能。後日もっと使いやすい形で提供予定
 
 ```bash
 $ python image2mp4.py example
