@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinterdnd2 import *
 from pdf2jpg import pdf2jpg
+import subprocess
 import os
 import glob
 import cv2
@@ -21,6 +22,7 @@ def pdf2image():
         filename = filename + "_vid"
         image2mp4(image_dir, filename)
 
+        subprocess.run('explorer {}'.format(os.path.join(cwd, "output")))
         text.set("Done!")
     except Exception as e:
         text.set(e)
@@ -39,7 +41,7 @@ def image2mp4(image_dir, filename):
     video_writer.release()
 
 if __name__ == "__main__":
-    pwd = os.getcwd()
+    cwd = os.getcwd()
 
     # Main window
     root = TkinterDnD.Tk()
