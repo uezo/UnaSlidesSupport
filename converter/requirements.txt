@@ -1,0 +1,4 @@
+opencv-python==4.6.0.66
+tkinter
+pdf2jpg
+tkinterdnd2
