@@ -6,6 +6,7 @@ import subprocess
 import os
 import glob
 import cv2
+from pathlib import Path
 
 def drop(event):
     print(event.data)
@@ -41,7 +42,8 @@ def image2mp4(image_dir, filename):
     video_writer.release()
 
 if __name__ == "__main__":
-    cwd = os.getcwd()
+    cwd = Path(__file__).resolve().parent
+    os.chdir(cwd)
 
     # Main window
     root = TkinterDnD.Tk()
